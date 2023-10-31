@@ -21,10 +21,12 @@ body{
 }
 .bg-blur{
     background: rgba(0, 128, 128, 0.10);
+    -webkit-backdrop-filter: blur(29px);
     backdrop-filter: blur(29px);
 }
 .bg-blue-blur{
     background: #008080;
+    -webkit-backdrop-filter: blur(29px);
     backdrop-filter: blur(29px);
 }
 .overlay {
