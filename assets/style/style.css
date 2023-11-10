@@ -2,6 +2,8 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
+}
+.dark-theme{
     background: #011515;
 }
 
@@ -64,6 +66,14 @@ body{
     background-size: cover;
 }
 
+/* ================ natural-background ----------- */
+.natural-background{
+    background-image: url('../images/Radixone-Nutral.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /* =============== ranger-styling ====================== */
 .slidecontainer {
     width: 100%; /* Width of the outside container */
@@ -103,5 +113,63 @@ body{
     width: 30px; /* Set a specific slider handle width */
     height: 30px; /* Slider handle height */
     background: #008080; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+
+  /* ================== Natural-Theme-Styling =================== */
+  
+  .natural-theme{
+    background: #008181;
+  }
+  .frequency-bg{
+    background: #40A1A1;
+  }
+  .natural-blur-bg{
+    border-radius: 4px;
+    border: 0.892px solid rgba(173, 173, 173, 0.14);
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(29px);
+  }
+
+  /* =============== ranger-styling ====================== */
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 15px; /* Specified height */
+    background: #014747; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    border-radius: 100%;
+    width: 30px; /* Set a specific slider handle width */
+    height: 30px; /* Slider handle height */
+    background: #fff; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    border-radius: 100%;
+    width: 30px; /* Set a specific slider handle width */
+    height: 30px; /* Slider handle height */
+    background: #fff; /* Green background */
     cursor: pointer; /* Cursor on hover */
   }
