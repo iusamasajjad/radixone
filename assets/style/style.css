@@ -186,3 +186,20 @@ body{
     overflow-x: hidden;
     transition: 0.5s;
 }
+
+/* ================= light-theme ===================== */
+
+.light-blur-bg{
+    border-radius: 4px;
+    border: 0.892px solid rgba(173, 173, 173, 0.14);
+    background: rgba(0, 154, 154, 0.10);
+    backdrop-filter: blur(29px);
+}
+
+/* ================ light-background ----------- */
+.light-background{
+    background-image: url('../images/Radixone-light.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
