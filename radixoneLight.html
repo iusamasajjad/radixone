@@ -195,6 +195,20 @@
             >
               config
             </button>
+            <!-- theme-switcher -->
+            <div
+              id="dropdown-wrapper"
+              class="dropdown-wrapper border-gray text-black py-2 px-4"
+              tabindex="1"
+            >
+              <span class="">Theme</span>
+
+              <ul class="dropdown-list text-white bg-black">
+                <li><a href="./radixoneLight.html">light</a></li>
+                <li><a href="./index.html">Dark</a></li>
+                <li><a href="./radixoneNatural.html">Natural</a></li>
+              </ul>
+            </div>
           </ul>
         </div>
       </div>
@@ -219,6 +233,20 @@
           >
             config
           </button>
+          <!-- theme-switcher -->
+          <div
+            id="dropdown-wrapper-mob"
+            class="dropdown-wrapper border-gray mx-1 text-black py-2 px-4"
+            tabindex="1"
+          >
+            <span class="">Theme</span>
+
+            <ul class="dropdown-list text-white bg-black">
+              <li><a href="./radixoneLight.html">light</a></li>
+              <li><a href="./index.html">Dark</a></li>
+              <li><a href="./radixoneNatural.html">Natural</a></li>
+            </ul>
+          </div>
           <button
             onclick="menuToggle()"
             type="button"
@@ -565,45 +593,6 @@
         </div>
       </div>
     </div>
-
-    <script type="text/javascript">
-      var toAdd = document.createDocumentFragment()
-      for (var i = 0; i < 140; i++) {
-        var newDiv = document.createElement("div")
-        newDiv.id = "r" + i
-        if (i % 20 == 0) {
-          newDiv.className = "h-10 w_2 bg-gray"
-          newDiv.innerHTML = `<span class="text-black text-xs relative top-10 right-3">3.50MHz</span>`
-        } else {
-          newDiv.className = "h-5 w_2 bg-gray"
-        }
-        toAdd.appendChild(newDiv)
-      }
-
-      document.getElementById("radio").appendChild(toAdd)
-
-      // ============ mobile-hamburger-function
-      function menuToggle() {
-        var x = document.getElementById("mobile-menu")
-        x.style.width = "100%"
-      }
-      function menuClose() {
-        var x = document.getElementById("mobile-menu")
-        x.style.width = "0%"
-      }
-
-      // configuration section toggle
-      function toggle() {
-        var x = document.getElementById("configuration")
-        var receiverBg = document.getElementById("receiverBg")
-        if (x.style.display === "none") {
-          x.style.display = "block"
-          receiverBg.style.height = "100%"
-        } else {
-          x.style.display = "none"
-          receiverBg.style.height = "100vh"
-        }
-      }
-    </script>
+    <script src="./assets/script/script.js"></script>
   </body>
 </html>

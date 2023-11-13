@@ -43,7 +43,15 @@ body{
     overflow-x: hidden;
     transition: 0.5s;
 }
-
+.radio-dark span{
+  color: white !important;
+}
+.radio-dark .dark{
+  background: white !important;
+}
+.natural .light{
+  background: white !important;
+}
 /* ========================== background-images =============== */
 .channel{
     background-image: url('../images/channel.png');
@@ -202,4 +210,82 @@ body{
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* =============== theme-switcher-css ============== */
+.dropdown-wrapper {
+  position: relative;
+  width: 100px;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-out;
+}
+.dropdown-wrapper:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -3px;
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: white transparent;
+}
+.dropdown-wrapper.is-active {
+  border-radius: 5px 5px 0 0;
+  box-shadow: none;
+  border-bottom: none;
+}
+.dropdown-wrapper.is-active:after {
+  border-color: #ffffff transparent;
+  transform: rotate(180deg);
+}
+#dropdown-wrapper-mob:after{
+  border-color: unset !important;
+  border-width: 0 !important;
+}
+#dropdown-wrapper-mob.is-active:after{
+  border-color: unset !important;
+}
+.dropdown-wrapper.is-active .dropdown-list {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  max-height: 400px;
+}
+
+.dropdown-list {
+  /* Size & position */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  /* Styles */
+  border-radius: 0 0 5px 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: none;
+  border-bottom: none;
+  list-style: none;
+  transition: all 0.3s ease-out;
+  /* Hiding */
+  max-height: 0;
+  overflow: hidden;
+  z-index: 10;
+}
+.dropdown-list li {
+  padding: 0 10px;
+}
+.dropdown-list li:hover a {
+  color: #f05b55;
+}
+.dropdown-list li:last-of-type a {
+  border: none;
+}
+.dropdown-list a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: all 0.3s ease-out;
+  border-bottom: 1px solid #e6e8ea;
 }
