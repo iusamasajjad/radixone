@@ -43,12 +43,12 @@ body{
     overflow-x: hidden;
     transition: 0.5s;
 }
-.radio-dark span{
+/* .radio-dark span{
   color: white !important;
-}
-.radio-dark .dark{
+} */
+/* .radio-dark .dark{
   background: white !important;
-}
+} */
 .natural .light{
   background: white !important;
 }
@@ -112,7 +112,7 @@ body{
     border-radius: 100%;
     width: 30px; /* Set a specific slider handle width */
     height: 30px; /* Slider handle height */
-    background: #008080; /* Green background */
+    background: var(--background); /* Green background */
     cursor: pointer; /* Cursor on hover */
   }
   
@@ -215,12 +215,32 @@ body{
 /* =============== theme-switcher-css ============== */
 .dropdown-wrapper {
   position: relative;
-  width: 100px;
+  width: 110px;
   border-radius: 5px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   outline: none;
   transition: all 0.3s ease-out;
+}
+.dropdown-wrapper2:after {
+  content: "" !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute !important;
+  top: 50% !important;
+  right: 3px !important;
+  margin-top: -3px !important;
+  border-width: 6px 6px 0 6px !important;
+  border-style: solid !important;
+  border-color: var(--color2) transparent !important;
+}
+.dropdown-wrapper2.is-active {
+  border-radius: 5px 5px 0 0;
+  box-shadow: none;
+  border-bottom: none;
+}
+.dropdown-wrapper2.is-active:after {
+  border-color: var(--color2) transparent;
+  transform: rotate(180deg);
 }
 .dropdown-wrapper:after {
   content: "";
@@ -228,21 +248,23 @@ body{
   height: 0;
   position: absolute;
   top: 50%;
-  right: 15px;
+  right: 3px;
   margin-top: -3px;
   border-width: 6px 6px 0 6px;
   border-style: solid;
-  border-color: white transparent;
+  border-color: var(--color) transparent;
 }
+
 .dropdown-wrapper.is-active {
   border-radius: 5px 5px 0 0;
   box-shadow: none;
   border-bottom: none;
 }
 .dropdown-wrapper.is-active:after {
-  border-color: #ffffff transparent;
+  border-color: var(--color) transparent;
   transform: rotate(180deg);
 }
+
 #dropdown-wrapper-mob:after{
   border-color: unset !important;
   border-width: 0 !important;
